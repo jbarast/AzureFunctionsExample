@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloFunction
+namespace HelloFunction 
 {
-    internal class Message : IMessage
-    {       
+    public class Message : BaseMessage, IMessage //where IBaseMessage : BaseMessage
+    {
 
-        public IBaseMessage BaseMessage { get; }
+       
 
-        public Message(IBaseMessage baseMessage)
+        public Message() : base()
         {
-            BaseMessage = baseMessage;
+            
         }
+
 
         public string CreateMessage(string name, string country)
         {

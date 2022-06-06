@@ -37,7 +37,7 @@ namespace HelloFunction
             country = country ?? data?.country;
 
             string responseMessage = _message.CreateMessage(name, country);
-            _message.BaseMessage.PrintMessage(responseMessage);
+            _message.PrintMessage(responseMessage);
 
             return new OkObjectResult(responseMessage);
         }
