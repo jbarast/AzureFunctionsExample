@@ -19,6 +19,7 @@ namespace HelloFunction
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddTransient<IMessage, Message>();
+            builder.Services.AddTransient<IBaseMessage, BaseMessage>();
         }
     }
 }

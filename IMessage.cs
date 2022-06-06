@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace HelloFunction
 {
-    public interface IMessage
+    public interface IMessage 
     {
+        public IBaseMessage BaseMessage { get; }
         string CreateMessage(string name, string country);
     }
 }
